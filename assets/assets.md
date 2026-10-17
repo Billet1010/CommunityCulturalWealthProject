@@ -1,1 +1,5 @@
 This is the assets folder
+
+
+**references:**  
+https://www.google.com/search?sca_esv=2f4e5f7f4d538f07&rlz=1C5CHFA_enUS850US850&sxsrf=APpeQntsa5X80H5QOFgr7qbdK7eL24mwJg:1792213969014&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832cSpkWkfSwsmpNIrD_OQ-UdFAe4qAwsQWVbrtprjzBSpD5WmxHV9GQVdPkL5dutr9Tsk9Psqv8-BeuxQCSKzxuHukRi7DQvlKeueInJ-gxdjC1x1cT4eB62_9GjrNa1ChdCXlYf7zkZgZrtqbUUIkPEou622ts9Lzc_YJQjngALVvd2kyg&q=mountain+backgrounds+for+websites&sa=X&ved=2ahUKEwjk4u-npcCXAxU7GIAAHWoFAoIQtKgLegQIFhAB&biw=1254&bih=928&dpr=2#sv=CAMSURoyKhBlLWNZZ0VVYWlNWDN1RExNMg5jWWdFVWFpTVgzdURMTToOaHM5UV9ITi14cXRpNU0gBCoXCgFzEhBlLWNZZ0VVYWlNWDN1RExNGAEwARgHIIGB8NgMSggQAhgBIAIoAQ
