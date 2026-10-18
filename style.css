@@ -1,0 +1,160 @@
+
+/* Chrome, Safari, Edge */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    top: 0;
+    left: 0;
+    scrollbar-width: none;
+    font-size: 1vw;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+
+
+.imageBlur{
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+
+}
+
+
+#background{
+
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/background.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+
+
+}
+
+#navigationalBoard{
+    position: fixed;
+
+    top: 50%;
+    
+    width: 5%;
+    height: 0%;
+
+    transform: translate(-50%, -50%);
+
+    left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+}
+
+
+#title{
+
+    position: relative;
+    width: 50%;
+    height: 40%;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    transition: 1s;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+
+/* button for nav class */
+
+.button{
+
+    width: 95%;
+    height: 20%;
+    border: 1px solid white;
+    border-radius: 16px;
+    color: white;
+    margin: 0;
+
+}
+
+.button p{
+
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+
+}
+
+/* animation class */
+.navigationBoardAnimationForward{
+
+    animation-name: showNav;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+
+}
+
+.navigationBoardAnimationReverse{
+    
+    animation-name: showNav;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+
+}
+
+
+
+
+
+/* animation */
+
+
+@keyframes showNav{
+
+0%{
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 0%;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+25%{
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 5%;
+    height: 0%;
+}
+100%{
+    height: 75%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+}
