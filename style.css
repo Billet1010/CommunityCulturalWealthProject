@@ -1,4 +1,9 @@
 
+@font-face{
+    font-family: 'chango';
+    src: url("Chango/Chango-Regular.ttf") format('truetype');
+}
+
 /* Chrome, Safari, Edge */
 html::-webkit-scrollbar {
     display: none;
@@ -23,6 +28,16 @@ body{
     left: 0;
     top: 0;
 }
+
+footer{
+    position: relative;
+    top: 400vh;
+    visibility: hidden;
+    height: 2.5vh;
+    width: 100%;
+    z-index: -1;
+}
+
 
 
 .imageBlur{
@@ -52,6 +67,36 @@ body{
 
 }
 
+/* bar */
+
+#bar{
+
+    position: fixed;
+    width: 1%;
+    height: 95vh;
+    border-radius: 5rem;
+    border: 0px solid white;
+    left: 97.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    overflow:hidden;
+    z-index: 200;
+
+}
+
+
+#beforeBar{
+    position:absolute;
+    width: 100%;
+    height: 110%;
+    border-radius: 5rem;
+    top: -100%;
+    background: rgba(252, 176, 68, 0.6);
+
+    margin: 0;
+}
+
 #navigationalBoard{
     position: fixed;
 
@@ -76,17 +121,29 @@ body{
 #title{
 
     position: relative;
-    width: 50%;
-    height: 40%;
+    width: 75%;
+    height: 60%;
     left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
-    padding: 0;
+    padding: 0%;
     z-index: 100;
     transition: 1s;
     border: 1px solid rgba(255, 255, 255, 0.35);
 
+}
+
+#titleText{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0.1rem;
+    font-family: chango, arial;
+    font-size: 9rem;
+    font-weight: bold;
+    color: white;
 }
 
 
@@ -96,11 +153,14 @@ body{
 
     width: 95%;
     height: 20%;
-    border: 1px solid white;
     border-radius: 16px;
     color: white;
     margin: 0;
 
+}
+
+.button:hover{
+    cursor: pointer;
 }
 
 .button p{
@@ -108,11 +168,239 @@ body{
     position: relative;
     top: 50%;
     transform:translateY(-50%);
-    font-size: 1rem;
+    font-size: 0.5rem;
     text-align: center;
     margin: 0;
+    font-family: chango;
+    font-weight: bold;
 
 }
+
+/* aspirations */
+#aspirationalDiv{
+    display: grid;
+
+    position: relative;
+    height: 95vh;
+    width: 1px;
+    left: 55%;
+    top: 100vh;
+    visibility: hidden;
+
+    transform:translateX(-50%);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "top-row top-row" 
+        "bottom-left bottom-right";
+
+    gap: 5%;
+    padding: 0;
+    margin: 0;
+
+    overflow:hidden;
+
+}
+
+#aTitle{
+
+    grid-area: top-row;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+#aText{
+    grid-area: bottom-left;
+    grid-row: 2/5;
+    grid-column: 1/3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#aImage{
+    grid-area: bottom-right;
+    grid-row: 1/5;
+    grid-column: 3/5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+/* familial */
+#familialDiv{
+    display: grid;
+
+    position: relative;
+    height: 95vh;
+    width: 1px;
+    left: 55%;
+    top: 200vh;
+    visibility: hidden;
+
+    transform:translateX(-50%);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "top-row top-row" 
+        "bottom-left bottom-right";
+
+    gap: 5%;
+    padding: 0;
+    margin: 0;
+
+    overflow:hidden;
+
+}
+
+#fTitle{
+
+    grid-area: top-row;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+#fText{
+    grid-area: bottom-left;
+    grid-row: 2/5;
+    grid-column: 1/3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#fImage{
+    grid-area: bottom-right;
+    grid-row: 1/5;
+    grid-column: 3/5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* familial */
+#linguisticDiv{
+    display: grid;
+
+    position: relative;
+    height: 95vh;
+    width: 1px;
+    left: 55%;
+    top: 300vh;
+    visibility: hidden;
+
+    transform:translateX(-50%);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "top-row top-row" 
+        "bottom-left bottom-right";
+
+    gap: 5%;
+    padding: 0;
+    margin: 0;
+
+    overflow:hidden;
+
+}
+
+#lTitle{
+
+    grid-row: 1/2;
+    grid-column: 1/3;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+#lText{
+    grid-row: 2/5;
+    grid-column: 1/3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#lImage{
+    grid-row: 1/5;
+    grid-column: 3/5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* paragraph */
+
+#paragraph{
+
+    display: grid;
+    
+    position: relative;
+    width: 1px;
+    height: 95vh;
+    left: 55%;
+    top: 400vh;
+    visibility: hidden;
+
+    transform: translateX(-50%);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    gap: 5%;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+
+}
+
+#paragraphTitle{
+
+    grid-row: 1/2;
+    grid-column: 1/5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+#text{
+     grid-row: 2/5;
+    grid-column: 1/5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+
+
 
 /* animation class */
 .navigationBoardAnimationForward{
@@ -128,6 +416,24 @@ body{
     
     animation-name: showNav;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+
+}
+
+.cardAnimationForward{
+
+    animation-name: showAspirations;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+
+}
+
+.cardAnimationReverse{
+
+    animation-name: showAspirations;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-direction: reverse;
 
@@ -155,6 +461,30 @@ body{
 100%{
     height: 75%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+@keyframes showAspirations{
+
+    0%{
+        border: none;
+    }
+
+    5%{
+        border: 1px solid white;
+        visibility: visible;
+        width: 0%;
+    }
+
+
+    25%{
+        border: none;
+    }
+
+    100%{
+        width: 75%;
+        visibility: visible;
     }
 
 }
