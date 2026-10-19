@@ -17,7 +17,7 @@ html{
     top: 0;
     left: 0;
     scrollbar-width: none;
-    font-size: 1vw;
+    font-size: 1vh;
 }
 
 body{
@@ -76,9 +76,10 @@ footer{
     height: 95vh;
     border-radius: 5rem;
     border: 0px solid white;
-    left: 97.5%;
+    left: 98%;
     top: 50%;
-    transform: translateY(-50%);
+    visibility: hidden;
+    transform: translate(-50%, -50%);
     margin: 0;
     overflow:hidden;
     z-index: 200;
@@ -114,6 +115,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.35);
 
 }
 
@@ -141,7 +143,7 @@ footer{
     margin: 0;
     padding: 0.1rem;
     font-family: chango, arial;
-    font-size: 9rem;
+    font-size: 15rem;
     font-weight: bold;
     color: white;
 }
@@ -161,6 +163,9 @@ footer{
 
 .button:hover{
     cursor: pointer;
+    width: 110%;
+    font-size: 1.5rem;
+
 }
 
 .button p{
@@ -168,11 +173,11 @@ footer{
     position: relative;
     top: 50%;
     transform:translateY(-50%);
-    font-size: 0.5rem;
+    font-size: 1.25rem;
     text-align: center;
     margin: 0;
     font-family: chango;
-    font-weight: bold;
+    font-weight: normal;
 
 }
 
@@ -213,7 +218,21 @@ footer{
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    overflow:hidden;
 
+}
+
+#aTitle p{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: chango, arial;
+    font-size: 9.5rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
 #aText{
@@ -269,18 +288,36 @@ footer{
 
     grid-area: top-row;
     grid-row: 1/2;
-    grid-column: 1/3;
+    grid-column: 3/5;
     position:absolute;
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    font-family: chango;
+    font-size: 5rem;
+    color: white;
+    overflow: hidden;
 
+}
+
+
+#fTitle p{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: chango, arial;
+    font-size: 10rem;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    text-align: center;
 }
 
 #fText{
     grid-area: bottom-left;
     grid-row: 2/5;
-    grid-column: 1/3;
+    grid-column: 3/5;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -290,7 +327,7 @@ footer{
 #fImage{
     grid-area: bottom-right;
     grid-row: 1/5;
-    grid-column: 3/5;
+    grid-column: 1/3;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -328,17 +365,31 @@ footer{
 #lTitle{
 
     grid-row: 1/2;
-    grid-column: 1/3;
+    grid-column: 1/5;
     position:absolute;
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    text-align: center;
 
 }
 
+#lTitle p{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: chango, arial;
+    font-size: 12.5rem;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
 #lText{
-    grid-row: 2/5;
-    grid-column: 1/3;
+    grid-row: 2/3;
+    grid-column: 1/5;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -346,8 +397,8 @@ footer{
 }
 
 #lImage{
-    grid-row: 1/5;
-    grid-column: 3/5;
+    grid-row: 3/5;
+    grid-column: 1/5;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -386,7 +437,23 @@ footer{
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    overflow: hidden;
 
+}
+
+
+#paragraphTitle p{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: chango, arial;
+    width: 100%;
+    text-align: center;
+    font-size: 12.5rem;
+    color: white;
+    overflow: hidden;
+    text-align: center;
 }
 
 #text{
@@ -439,6 +506,21 @@ footer{
 
 }
 
+.barAnimationForward{
+
+    animation-name: barAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+
+}
+.barAnimationReverse{
+    animation-name: barAppear;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
 
 
 
@@ -461,6 +543,24 @@ footer{
 100%{
     height: 75%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+@keyframes barAppear{
+
+    0%{
+        width: 0%;
+        visibility: hidden;
+    }
+
+    5%{
+        visibility: visible;
+    }
+
+    100%{
+        width: 1%;
+        visibility: visible;
     }
 
 }

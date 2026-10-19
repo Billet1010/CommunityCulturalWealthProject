@@ -5,6 +5,7 @@ const navigationalBoard = document.getElementById("navigationalBoard");
 
 // bar
 const bar = document.getElementById("beforeBar");
+const barDiv = document.getElementById("bar");
 bar.style.top = "-100%";
 
 // title
@@ -52,11 +53,13 @@ window.addEventListener('scroll', () => {
     if( calculation && !defaultState){
 
         runAnimation("navigationBoardAnimationForward");
+        runBarAnimation("barAnimationForward");
          defaultState = true;
 
     } else if(!calculation && defaultState){
 
         runAnimation("navigationBoardAnimationReverse");
+        runBarAnimation("barAnimationReverse");
         defaultState = false;
 
     }
@@ -82,6 +85,12 @@ function runAnimation(className){
     void navigationalBoard.offsetWidth;
     navigationalBoard.classList.add(className);
 
+}
+
+function runBarAnimation(className){
+    barDiv.classList.remove("barAnimationForward", "barAnimationReverse");
+    void barDiv.offsetWidth;
+    barDiv.classList.add(className);
 }
 
 const observer = new IntersectionObserver((entries) => {
