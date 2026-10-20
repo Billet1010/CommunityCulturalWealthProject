@@ -115,7 +115,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    border: 0px solid rgba(255, 255, 255, 0.35);
 
 }
 
@@ -133,19 +133,24 @@ footer{
     z-index: 100;
     transition: 1s;
     border: 1px solid rgba(255, 255, 255, 0.35);
+    container-type: size;
 
 }
 
 #titleText{
     position: absolute;
     width: 100%;
-    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
-    padding: 0.1rem;
+    padding: auto;
     font-family: chango, arial;
-    font-size: 15rem;
+    font-size: min(17.5cqi, 20cqb);
     font-weight: bold;
     color: white;
+    word-wrap: break-word;
+    text-wrap: balance;
 }
 
 
@@ -207,6 +212,8 @@ footer{
 
     overflow:hidden;
 
+    container-type: size;
+
 }
 
 #aTitle{
@@ -231,6 +238,7 @@ footer{
     font-size: 9.5rem;
     width: 100%;
     text-align: center;
+    font-size: min(5cqi, 5cqb);
     color: white;
     overflow: hidden;
 }
@@ -282,6 +290,8 @@ footer{
 
     overflow:hidden;
 
+    container-type: size;
+
 }
 
 #fTitle{
@@ -294,7 +304,6 @@ footer{
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
     font-family: chango;
-    font-size: 5rem;
     color: white;
     overflow: hidden;
 
@@ -307,11 +316,12 @@ footer{
     top: 50%;
     transform: translateY(-50%);
     font-family: chango, arial;
-    font-size: 10rem;
     width: 100%;
     color: white;
     overflow: hidden;
     text-align: center;
+    font-size: min(5cqi, 5cqb);
+
 }
 
 #fText{
@@ -360,6 +370,8 @@ footer{
 
     overflow:hidden;
 
+    container-type: size;
+
 }
 
 #lTitle{
@@ -380,7 +392,7 @@ footer{
     top: 50%;
     transform: translateY(-50%);
     font-family: chango, arial;
-    font-size: 12.5rem;
+    font-size: min(10cqi, 10cqi);
     width: 100%;
     color: white;
     overflow: hidden;
@@ -427,6 +439,8 @@ footer{
     margin: 0;
     overflow:hidden;
 
+    container-type: size;
+
 }
 
 #paragraphTitle{
@@ -450,7 +464,7 @@ footer{
     font-family: chango, arial;
     width: 100%;
     text-align: center;
-    font-size: 12.5rem;
+    font-size: min(10cqi, 10cqb);
     color: white;
     overflow: hidden;
     text-align: center;
