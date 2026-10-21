@@ -28,16 +28,21 @@ const aspirationalDiv = document.getElementById("aspirationalDiv");
 
 const paragraphDiv = document.getElementById("paragraph");
 
+//butonts
+
+const but1 = document.getElementById("but1");
+const but2 = document.getElementById("but2");
+const but3 = document.getElementById("but3");
+const but4 = document.getElementById("but4");
+
 
 // scroll
 let scrollTop = window.scrollY;
-console.log(bottomOfTitle);
 
 
 window.addEventListener('resize', () => {
 
     bottomOfTitle = title.getBoundingClientRect().bottom + window.scrollY;
-    console.log(bottomOfTitle);
 
 });
 
@@ -54,13 +59,21 @@ window.addEventListener('scroll', () => {
 
         runAnimation("navigationBoardAnimationForward");
         runBarAnimation("barAnimationForward");
-         defaultState = true;
+        defaultState = true;
+        but1.style = "";
+        but2.style = "";
+        but3.style = "";
+        but4.style = "";
 
     } else if(!calculation && defaultState){
 
         runAnimation("navigationBoardAnimationReverse");
         runBarAnimation("barAnimationReverse");
         defaultState = false;
+        but1.style = "";
+        but2.style = "";
+        but3.style = "";
+        but4.style = "";
 
     }
 
@@ -97,6 +110,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             runCardAnimation(entry.target, "cardAnimationForward");
+            buttonLogic(entry.target);
         } else {
             runCardAnimation(entry.target, "cardAnimationReverse");
         }
@@ -120,11 +134,27 @@ function runCardAnimation(obj, className){
 
 //buttons
 
+const stylingForButton = `
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+`;
+
 function aspirationButton(){
     aspirationalDiv.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
     });
+
+    but1.style = stylingForButton;
+    but2.style = "";
+    but3.style = "";
+    but4.style = "";
+    
+    [but1, but2, but3, but4].forEach(b => b.style = "");
+    buttonMap.get(aspirationalDiv).style = stylingForButton;
+
 }
 
 function familialButton(){
@@ -133,6 +163,14 @@ function familialButton(){
         block: 'center'
     });
 
+    but1.style = "";
+    but2.style = stylingForButton;
+    but3.style = "";
+    but4.style = "";
+
+    [but1, but2, but3, but4].forEach(b => b.style = "");
+    buttonMap.get(familialDiv).style = stylingForButton;
+
 }
 
 function linguisticButton(){
@@ -140,11 +178,109 @@ function linguisticButton(){
         behavior: 'smooth',
         block: 'center'
     });
+
+    but1.style = "";
+    but2.style = "";
+    but3.style = stylingForButton;
+    but4.style = "";
+
+    [but1, but2, but3, but4].forEach(b => b.style = "");
+    buttonMap.get(linguisticDiv).style = stylingForButton;
+    
 }
 
 function paragraphButton(){
     paragraphDiv.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
-    })
+    });
+
+    [but1, but2, but3, but4].forEach(b => b.style = "");
+    buttonMap.get(paragraphDiv).style = stylingForButton;
 }
+
+const buttonMap = new Map([
+    [aspirationalDiv, but1],
+    [familialDiv, but2],
+    [linguisticDiv, but3],
+    [paragraphDiv, but4]   
+]);
+
+function buttonLogic(entry){
+    [but1, but2, but3, but4].forEach(b => b.style = "");
+    buttonMap.get(entry).style = stylingForButton;
+}
+
+
+
+//text appear
+const textMap = new Map([
+    [aspirationalDiv, 
+        `
+            To maintain the hopes 
+            and ambitions of a goal,
+            through all physical and
+            mental barriers. To dream
+            about the possibilities
+            in the future without
+            real means of attaining
+            the goal at current
+            state.  
+        `
+    ],
+    [familialDiv,
+        `
+            The cultural knowledges,    
+            cultivated by family members 
+            that carry a sense of community,
+            history, memory, and cultural intuition. 
+            Familial capital can also reach out to 
+            “extended family,” who can include 
+            friends, dead families, and cousins. 
+            Familial capital can be fostered 
+            between different “families” through 
+            sports, school, and religious gatherings.
+        `
+    ],
+    [linguisticDiv,
+        `
+            Networks of people and commuty 
+            who provide instrumental and emotional 
+            support to navigate through the hardships 
+            of society's institutions. Networks 
+            can help people attain their goals, 
+            such as higher education, job opportunities, 
+            and healthcare, as made prominent with
+            People of Color, who use their social 
+            capital to attain their goals.
+        `
+    ],
+    [paragraphDiv, 
+        `
+        `
+    ]
+]);
+
+const mappingText = new Map([
+
+    ['a', 'aText'],
+    ['f', 'fText'],
+    ['l', 'lText'],
+    ['p', '']
+    
+]);
+
+/*
+function textAppearWhenEntry(entry){
+
+    setTimeout(() => {
+
+        const forCurrent = textMap.get(right);
+
+        const current = document.quierySelectorAll(`${forCurrent} p`);
+
+        current.innerText = textMap.get(entry);
+    }, 2000);
+
+}
+    */
