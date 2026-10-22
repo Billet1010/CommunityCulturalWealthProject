@@ -596,11 +596,11 @@ footer{
 }
 
 #text p{
+    text-indent: 10rem;
     position: absolute;
     margin: 0;
     top: 0%;
     font-family: Chango, arial;
-    font-size: 9.5rem;
     width: 95%;
     left: 50%;
     transform: translateX(-50%);

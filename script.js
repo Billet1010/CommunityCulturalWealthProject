@@ -99,19 +99,19 @@ const textMap = new Map([
     ],
     [paragraphDiv, 
         `
-        The community cultural wealth that is seen 
+            The community cultural wealth that is seen 
         in my project includes: aspirational wealth, 
         familial wealth, and social wealth. Aspirational 
         capital is the hopes and ambitions towards a 
         goal in life, even in the face of struggles
-         and obstacles. Aspirational capital can also 
-         extend to dreams of possibilities, even if 
-         they aren't obtainable in the present state. 
-         Familial capital is the wealth of culture, 
-         knowledge, and memory that is nurtured through 
-         the family. The family can include extended 
-         family, which includes school, sports teams, 
-         distant relatives, and ancestors of the past.
+        and obstacles. Aspirational capital can also 
+        extend to dreams of possibilities, even if 
+        they aren't obtainable in the present state. 
+        Familial capital is the wealth of culture, 
+        knowledge, and memory that is nurtured through 
+        the family. The family can include extended 
+        family, which includes school, sports teams, 
+        distant relatives, and ancestors of the past.
         Social capital is the peers and contacts that 
         can help people move through society's many 
         systems and institutions. In other words, the 
