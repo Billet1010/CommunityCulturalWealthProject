@@ -4,11 +4,6 @@
     src: url("Chango/Chango-Regular.ttf") format('truetype');
 }
 
-@font-face{
-    font-family: 'InstrumentSans';
-    src: url("Instrument_Sans/normal.ttf")
-}
-
 /* Chrome, Safari, Edge */
 html::-webkit-scrollbar {
     display: none;
@@ -263,7 +258,7 @@ footer{
 
 #aText{
     grid-area: bottom-left;
-    grid-row: 2/4;
+    grid-row: 2/5;
     grid-column: 1/3;
     position: absolute;
     width: 100%;
@@ -295,6 +290,24 @@ footer{
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#aImage p {
+
+    position: absolute;
+    margin: 0;
+    width: 95%;
+    left: 2.5%;
+    height: 95%;
+    top: 2.5%;
+    border-radius: 16px;
+
+    background-image: url("assets/aspiration.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+
 }
 
 
@@ -394,6 +407,24 @@ footer{
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
+#fImage p{
+
+    position: absolute;
+    margin: 0;
+    width: 95%;
+    left: 2.5%;
+    height: 95%;
+    top: 2.5%;
+    border-radius: 16px;
+
+    background-image: url("assets/familial.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+
+}
+
 /* familial */
 #linguisticDiv{
     display: grid;
@@ -450,8 +481,8 @@ footer{
 }
 
 #lText{
-    grid-row: 2/3;
-    grid-column: 1/5;
+    grid-row: 2/5;
+    grid-column: 1/3;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -469,18 +500,36 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     text-align: left;
-    font-size: min(3cqi, 3cqb);
+    font-size: min(4cqi, 4cqb);
     color: white;
     overflow: hidden;
 }
 
 #lImage{
-    grid-row: 3/5;
-    grid-column: 1/5;
+    grid-row: 1/5;
+    grid-column: 3/5;
     position: absolute;
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#lImage p{
+
+    position: absolute;
+    margin: 0;
+    width: 85%;
+    left: 7.5%;
+    height: 95%;
+    top: 2.5%;
+    border-radius: 16px;
+
+    background-image: url("assets/social.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+
 }
 
 /* paragraph */
@@ -546,6 +595,21 @@ footer{
 
 }
 
+#text p{
+    position: absolute;
+    margin: 0;
+    top: 0%;
+    font-family: Chango, arial;
+    font-size: 9.5rem;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    font-size: min(3.25cqi, 3.25cqb);
+    color: white;
+    overflow: hidden;
+}
+
 
 
 
@@ -580,7 +644,7 @@ footer{
 .cardAnimationReverse{
 
     animation-name: showAspirations;
-    animation-duration: 0.5s;
+    animation-duration: 0.1s;
     animation-fill-mode: forwards;
     animation-direction: reverse;
 
@@ -601,8 +665,18 @@ footer{
     animation-direction: reverse;
 }
 
-
-
+.appearAnimationForward{
+    animation-name:show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+.appearAnimationReverse{
+    animation-name: show;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
 
 
 /* animation */
@@ -623,7 +697,7 @@ footer{
 100%{
     height: 75%;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    }
+}
 
 }
 
@@ -665,6 +739,17 @@ footer{
     100%{
         width: 75%;
         visibility: visible;
+    }
+
+}
+
+@keyframes show{
+
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 
 }
